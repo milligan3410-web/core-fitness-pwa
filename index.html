@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Core Fitness</title>
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#050712">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
+</head>
+<body>
+
+  <header class="app-header">
+    <img src="icons/icon-192.png" class="logo">
+    <div class="brand">
+      <h1>Core Fitness</h1>
+      <p>Train with intent. Live with strength.</p>
+    </div>
+  </header>
+
+  <main id="app">
+    <section id="home" class="view active">
+      <h2>Today’s Focus</h2>
+      <div class="card-grid">
+        <article class="card primary">
+          <h3>Full Body Strength</h3>
+          <p>45 min • Intermediate</p>
+          <button class="cta">Start Workout</button>
+        </article>
+        <article class="card">
+          <h3>Conditioning</h3>
+          <p>25 min • High intensity</p>
+        </article>
+        <article class="card">
+          <h3>Recovery</h3>
+          <p>10 min • Mobility & breath</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="programs" class="view">
+      <h2>Programs</h2>
+      <div class="card-list">
+        <article class="card">
+          <h3>Strength Foundations</h3>
+          <p>4 weeks • 3 days/week</p>
+        </article>
+        <article class="card">
+          <h3>Lean & Athletic</h3>
+          <p>6 weeks • 4 days/week</p>
+        </article>
+        <article class="card">
+          <h3>Performance Engine</h3>
+          <p>8 weeks • 5 days/week</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="workouts" class="view">
+      <h2>Workouts</h2>
+      <div id="workout-list" class="card-list"></div>
+    </section>
+
+    <section id="profile" class="view">
+      <h2>Profile</h2>
+      <div class="profile-card">
+        <h3>Daniel</h3>
+        <p>Level: Intermediate</p>
+        <p>Goal: Strength & conditioning</p>
+        <button class="cta ghost">Edit goals</button>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <button data-view="home" class="active">Home</button>
+    <button data-view="programs">Programs</button>
+    <button data-view="workouts">Workouts</button>
+    <button data-view="profile">Profile</button>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
